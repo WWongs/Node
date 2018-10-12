@@ -1,0 +1,15 @@
+.padding50{
+    padding-top: 50px;
+}
+
+.curser{
+    cursor: pointer;
+}
+
+.area{
+    width: 100%;
+}
+
+.pull-right{
+float: right;
+}

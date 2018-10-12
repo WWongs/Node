@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>留言</title>
+
+    <link href="/public/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/index.css">
+
+  </head>
+  <body>
+    <div class="container"> 
+        <div class="page-header padding50">
+            <h1><a href="/">Example Node简易留言板 </a><small>发表评论</small></h1>
+        </div>
+        <div class="body padding50">
+
+            <form action="/postMsg" method="get">
+                <div class="inputCon">
+                    <span class="input-group-addon" id="">你的名字</span>
+                    <input id = "input_name" name="name" type="text" class="form-control" placeholder="Username" required minlength="2" maxlength="10">
+                </div>
+                <div class="inputCon padding50">
+                    <span class="input-group-addon" id="">留言内容</span>
+                    <textarea id = "area_msg" name="message" rows="5" class="area" placeholder="留言内容" required minlength="5" maxlength="20"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">发表留言</button>
+            </form>
+            <!-- form -->
+        </div>
+        <!--  div body -->
+
+    </div> 
+   
+  </body>
+
+
+</html>
