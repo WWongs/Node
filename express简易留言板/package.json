@@ -1,9 +1,0 @@
-{
-  "name": "",
-  "version": "",
-  "dependencies": {
-    "art-template": "^4.13.1",
-    "body-parser": "^1.18.3",
-    "express-art-template": "^1.0.1"
-  }
-}
