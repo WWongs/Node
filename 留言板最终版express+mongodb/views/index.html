@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Node简易留言板</title>
+
+    <link href="/public/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/index.css">
+
+  </head>
+  <body>
+    <div class="container"> 
+        <div class="page-header padding50">
+            <h1>Example Node简易留言板 <small>Subtext for header</small></h1>
+            <a href="/post" type="button" class="btn btn-success">发表留言</a>
+        </div>
+        <div class="list padding50">
+          <ul class="list-group">
+            {{each comments}}
+              <li class="list-group-item curser">{{$value.name}}说：{{$value.message}} <span class="pull-right">{{$value.dateTime}}</span></li>
+            {{/each}}
+          </ul>
+        </div>
+    </div> 
+   
+  </body>
+</html>
