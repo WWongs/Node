@@ -2,4 +2,4 @@
 
 使用art-template渲染页面，使用body-parser获得post发送的消息.
 
-使用前先'cnpm install'
+使用前先'cnpm install'，然后‘nodemon app.js’运行项目。
