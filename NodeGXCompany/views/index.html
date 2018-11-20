@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+
+<body>
+
+    <div class="index">
+        <div class="mainHead">
+            <div class="headTitle">
+                <div class="wrapper clearfix">
+                    <div class="left">
+                        <!-- <a href="/"><img src="/public/images/icon.png" alt="公司标志"></a> -->
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="width150"><a href="/comSystem">公司体系</a></li>
+                            <li class="width150"><a href="/comBusiness">核心业务</a></li>
+                            <li class="width150"><a href="/comIfomation">公司信息</a></li>
+                            <li class="width150"><a href="/comCulture">企业文化</a></li>
+                            <li class="width150"><a href="javascript:;" class="paddingLeft19" id="StranLink">简</a></li>
+                            <li class="width150"><a href="javascript:;" id="En">En</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- headTitle -->
+            <div class="pubHeader">
+                <div id="slideBox" class="slideBox">
+                    <div class="hd">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            {{ each banners }}
+                            <li><a href="##" target="_blank"><img src="{{ $value.imgUrl }}" /></a></li>
+                            {{ /each }}
+                        </ul>
+                    </div>
+                </div>
+                <!-- slideBox -->
+            </div>
+            <!-- pubHeader -->
+        </div>
+        <!-- mainHead -->
+
+        <div class="main">
+            <div class="wrapper clearfix">
+                <div class="item">
+                    <div class="hd clearfix">
+                        <strong>公司简介</strong>
+                        <span><a href="/comProfile">更多>></a> </span>
+                    </div>
+                    <div class="bd">
+                        江山不老，祖国常春!值此国庆佳节，祝愿我们伟大的祖国：永远繁荣昌盛！ 江山不老，祖国常春!值此国庆佳节，祝愿我们伟大的祖国：永远繁荣昌盛！
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <div class="hd clearfix">
+                        <strong>篇首语</strong>
+                        <span><a href="/firstArticle">更多>></a> </span>
+                    </div>
+                    <div class="bd">
+                        江山不老，祖国常春!值此国庆佳节，祝愿我们伟大的祖国：永远繁荣昌盛！ 江山不老，祖国常春!值此国庆佳节，祝愿我们伟大的祖国：永远繁荣昌盛！
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="videoCon">
+                    <video src=""></video>
+                </div>
+            </div>
+            <!-- wrapper -->
+            <div class="wrapper clearfix">
+                <div class="item">
+                    <div class="hd clearfix">
+                        <strong>公众号</strong>
+                        <span><a href="/auctions">更多>></a> </span>
+                    </div>
+                    <div class="bd">
+                        江山不老，祖国常春!值此国庆佳节，祝愿我们伟大的祖国：永远繁荣昌盛！ 江山不老，祖国常春!值此国庆佳节，祝愿我们伟大的祖国：永远繁荣昌盛！
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="width440 item">
+                    <div class="hd clearfix">
+                        <strong>常德市传统爱心书...</strong>
+                        <b>08/15</b>
+                    </div>
+                    <div class="bd">
+                        <img src="/public/images/img_2.jpg" alt="">
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="videoCon_2">
+                    <video src="/public/images/img_2.jpg"></video>
+                </div>
+            </div>
+            <!-- wrapper -->
+            <div class="wrapper clearfix">
+                <div class="item">
+                    <div class="hd clearfix">
+                        <strong>作预言</strong>
+                        <b>08/15</b>
+                    </div>
+                    <div class="bd">
+                        <img src="/public/images/img_5.jpg" alt="">
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="width440 item">
+                    <div class="hd clearfix">
+                        <strong>中秋祝福</strong>
+                        <b>08/15</b>
+                    </div>
+                    <div class="bd">
+                        <img src="/public/images/img_6.jpg" alt="">
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="ifoItem">
+                    <ul>
+                        {{ each news }}
+                        <li class="clearfix"><a href="/new?id={{ $value._id }}"><strong class="overflow">{{ $value.newTitle }}</strong><b>{{ $value.newDate }}</b></a> </li>
+                        {{ /each }}
+                    </ul>
+                </div>
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- main -->
+
+        <div class="pubFooter">
+            <div class="wrapper clearfix">
+                <div class="item">
+                    <h3>了解更多</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_1.png" alt=""><strong>街景地图</strong></li>
+                    </ul>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_2.png" alt=""><strong>微信</strong></li>
+                        <li><img src="/public/images/icon_3.png" alt=""><strong>微博</strong></li>
+                        <li><img src="/public/images/icon_4.png" alt=""><strong>公众号</strong></li>
+                    </ul>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <h3>加入我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_5.png" alt=""><strong>企业招聘</strong></li>
+                        <li><img src="/public/images/icon_6.png" alt=""><strong>企业合作</strong></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_7.png" alt=""><strong>合作洽谈</strong></li>
+                        <li><strong class="margin25">知识产权</strong></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>法律信息</h3>
+                    <ul>
+                        <li><strong>服务协议</strong></li>
+                        <li><strong>隐私策略</strong></li>
+                    </ul>
+                </div>
+                <div class="footerImg">
+                    <img src="/public/images/icon.png" alt="">
+                </div>
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- pubFooter -->
+    </div>
+    <!-- index -->
+</body>
+
+<script src="/public/js/returnFoot.js"></script>
+<script src="/public/js/jquery-2.0.0.min.js"></script>
+<script src="/public/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/public/js/addons.js"></script>
+<script src="/public/js/en.js"></script>
+<script>
+    $('#En').click(function () {
+        translate();
+    });
+</script>
+
+</html>

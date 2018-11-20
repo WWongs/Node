@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+
+<body>
+
+    <div class="index">
+        <div class="mainHead">
+            <div class="headTitle">
+                <div class="wrapper clearfix">
+                    <div class="left">
+                        <!-- <a href="/"><img src="/public/images/icon.png" alt="公司标志"></a> -->
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="width150"><a href="/comSystem">公司体系</a></li>
+                            <li class="width150"><a href="/comBusiness">核心业务</a></li>
+                            <li class="width150"><a href="/comIfomation">公司信息</a></li>
+                            <li class="width150"><a href="/comCulture">企业文化</a></li>
+                            <li class="width150"><a href="javascript:;" class="paddingLeft19" id="StranLink">简</a></li>
+                            <li class="width150"><a href="javascript:;" id="En">En</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- headTitle -->
+            <div class="pubHeader height300">
+                <img src="/public/images/img_7.jpg" alt="" class="headerImg">
+            </div>
+            <!-- pubHeader -->
+        </div>
+        <!-- mainHead -->
+
+        <div class="section">
+            <div class="wrapper">
+                <div class="secHeader">
+                    <strong><a href="/">首页</a> </strong>&gt;<strong><a href="/comIfomation">公司信息</a> </strong>&gt;<b>{{news.newTitle}}</b>
+                </div>
+                <!-- secHeader -->
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- section -->
+
+        <div class="newBody">
+            <div class="wrapper">
+                <h3 style="text-align:center;font-size:20px"> {{ news.newTitle }}</h3>
+                <h4 style="text-align:center;font-size:16px;color: #666666"> {{ news.newDate }} </h4>
+                <!-- white-space: pre-line; -->
+                <div style="font-size:14px;margin: 40px 0 100px 0;">
+                    {{@news.newBody}}
+                </div>
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- newBody -->
+
+        <div class="pubFooter">
+            <div class="wrapper clearfix">
+                <div class="item">
+                    <h3>了解更多</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_1.png" alt=""><strong>街景地图</strong></li>
+                    </ul>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_2.png" alt=""><strong>微信</strong></li>
+                        <li><img src="/public/images/icon_3.png" alt=""><strong>微博</strong></li>
+                        <li><img src="/public/images/icon_4.png" alt=""><strong>公众号</strong></li>
+                    </ul>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <h3>加入我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_5.png" alt=""><strong>企业招聘</strong></li>
+                        <li><img src="/public/images/icon_6.png" alt=""><strong>企业合作</strong></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_7.png" alt=""><strong>合作洽谈</strong></li>
+                        <li><strong class="margin25">知识产权</strong></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>法律信息</h3>
+                    <ul>
+                        <li><strong>服务协议</strong></li>
+                        <li><strong>隐私策略</strong></li>
+                    </ul>
+                </div>
+                <div class="footerImg">
+                    <img src="/public/images/icon.png" alt="">
+                </div>
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- pubFooter -->
+    </div>
+    <!-- index -->
+</body>
+
+<script src="/public/js/returnFoot.js"></script>
+<script src="/public/js/jquery-2.0.0.min.js"></script>
+<script src="/public/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/public/js/addons.js"></script>
+<script src="/public/js/en.js"></script>
+<script>
+    $('#En').click(function () {
+        translate();
+    });
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+﻿html{-webkit-text-size-adjust:none; /*解决chrome浏览器下字体不能小于12px*/}
+a{outline:none; text-decoration:none;} a:hover{ text-decoration:underline;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+html{zoom:1;}html *{outline:0;zoom:1;} html button::-moz-focus-inner{border-color:transparent!important;} 
+body{overflow-x: hidden;font-size: 12px;} body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-family: "Microsoft YaHei",sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0)} table{border-collapse:collapse;border-spacing:0;} fieldset,a img{border:0;} address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal;} li{list-style:none;} caption,th{text-align:left;} h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;} q:before,q:after{content:'';}
+input[type="submit"], input[type="reset"], input[type="button"], button { -webkit-appearance: none; /*去掉苹果的默认UI来渲染按钮*/} em,i{ font-style:normal;}
+select{-webkit-appearance:none;-moz-appearance:none;appearanearance:none;}
+
+
+.w_break{word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+strong,em,i{ font-style:normal; font-weight:normal;}
+.clear{ clear:both;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;line-height:0;}
+.clearfix{zoom:1;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+.fl{ float:left;}
+.fr{ float:right;}
+body{-webkit-text-size-adjust:none; /*禁止苹果对部分字体放大处理bug*/line-height: 1.7;}
+
+
+::-webkit-input-placeholder {color:#999; text-overflow:ellipsis;}
+:-moz-placeholder {color:#999; text-overflow:ellipsis;}
+::-moz-placeholder {color:#999; text-overflow:ellipsis;} /* for the future */
+:-ms-input-placeholder {color:#999; text-overflow:ellipsis;} 
+
+.lft{ float:left;}
+.rgt{ float:right;}
+
+
+body{font-family: "Microsoft YaHei",sans-serif;}
+body a{ color:#333;text-decoration:none;cursor:pointer}
+body a:hover,body a:active,body a:focus{text-decoration:none;outline:none}
+a:hover,a:link,a:visited,a{ color:inherit; text-decoration:none;}
+
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}

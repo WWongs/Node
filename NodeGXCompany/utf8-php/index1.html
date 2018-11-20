@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/index.css">
+    <script type="text/javascript" charset="utf-8" src="ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
+
+</head>
+
+<body>
+    <div class="index">
+
+        <div class="mainHead">
+            <div class="headTitle">
+                <div class="wrapper clearfix">
+                    <div class="left">
+                        <!-- <a href="/"><img src="/public/images/icon.png" alt="公司标志"></a> -->
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="width150"><a href="/comSystem">公司体系</a></li>
+                            <li class="width150"><a href="/comBusiness">核心业务</a></li>
+                            <li class="width150"><a href="/comIfomation">公司信息</a></li>
+                            <li class="width150"><a href="/comCulture">企业文化</a></li>
+                            <li class="width150"><a href="javascript:;" class="paddingLeft19" id="StranLink">简</a></li>
+                            <li class="width150"><a href="javascript:;" id="En">En</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- headTitle -->
+            <div class="pubHeader height300">
+                <img src="/public/images/img_7.jpg" alt="" class="headerImg">
+            </div>
+            <!-- pubHeader -->
+        </div>
+        <!-- mainHead -->
+
+        <div class="section">
+            <div class="wrapper">
+                <div class="secHeader">
+                    <strong><a href="/">首页</a> </strong>&gt;<b>编辑新闻页</b>
+                </div>
+                <!-- secHeader -->
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- section -->
+
+
+
+        <div class="newBody" style="margin-bottom:100px">
+            <div class="wrapper">
+                <div class="inputTitleDiv">
+                    <label for="title" id="labelTitle">这里输入新闻标题:
+                        <input type="text" name="title" id='newTitle'>
+                    </label>
+                </div>
+                <!-- // -->
+
+                <div>
+                    <script id="editor" type="text/plain" style="width:1200px;height:500px;"></script>
+                </div>
+
+                <!-- / -->
+
+                <button id="submitBtn">发布新闻</button>
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- newBody -->
+
+        <div class="pubFooter">
+            <div class="wrapper clearfix">
+                <div class="item">
+                    <h3>了解更多</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_1.png" alt=""><strong>街景地图</strong></li>
+                    </ul>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_2.png" alt=""><strong>微信</strong></li>
+                        <li><img src="/public/images/icon_3.png" alt=""><strong>微博</strong></li>
+                        <li><img src="/public/images/icon_4.png" alt=""><strong>公众号</strong></li>
+                    </ul>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <h3>加入我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_5.png" alt=""><strong>企业招聘</strong></li>
+                        <li><img src="/public/images/icon_6.png" alt=""><strong>企业合作</strong></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><img src="/public/images/icon_7.png" alt=""><strong>合作洽谈</strong></li>
+                        <li><strong class="margin25">知识产权</strong></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>法律信息</h3>
+                    <ul>
+                        <li><strong>服务协议</strong></li>
+                        <li><strong>隐私策略</strong></li>
+                    </ul>
+                </div>
+                <div class="footerImg">
+                    <img src="/public/images/icon.png" alt="">
+                </div>
+            </div>
+            <!-- wrapper -->
+        </div>
+        <!-- pubFooter -->
+
+    </div>
+</body>
+
+<script src="/public/js/returnFoot.js"></script>
+<script src="/public/js/jquery-2.0.0.min.js"></script>
+<script src="/public/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/public/js/addons.js"></script>
+<script src="/public/js/en.js"></script>
+<script type="text/javascript">
+    var ue = UE.getEditor('editor');
+
+    $('#submitBtn').click(function () {
+        getContent();
+    })
+
+    function getContent() {
+
+        let title = $("#newTitle").val();
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/edit', true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status >= 200) {
+                console.log(xhr.responseText);
+                window.location.href = '/comIfomation';
+            }
+        }
+        xhr.send('newTitle=' + title + '&' + 'newBody=' + UE.getEditor('editor').getContent().replace(/&/g, '`'));
+
+    }
+
+    $('#En').click(function () {
+        translate();
+    });
+</script>
+
+</html>
