@@ -1,0 +1,19 @@
+﻿
+
+   js部分：
+
+   export default {
+      data() {},
+      methods: {}
+   }
+
+
+   引入部分：
+		
+    import sample from './sample'
+
+    <script>
+        export default {
+            ...sample
+        }
+    </script>
